@@ -426,6 +426,8 @@ class LivyServer extends Logging {
 object LivyServer {
 
   def main(args: Array[String]): Unit = {
+    import org.apache.log4j.BasicConfigurator
+    BasicConfigurator.configure()
     val server = new LivyServer()
     try {
       server.start()

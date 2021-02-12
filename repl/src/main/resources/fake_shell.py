@@ -219,7 +219,7 @@ class NormalNode(object):
 
         try:
             for node in to_run_exec:
-                mod = ast.Module([node])
+                mod = ast.Module([node], [])
                 code = compile(mod, '<stdin>', 'exec')
                 exec(code, global_dict)
 
